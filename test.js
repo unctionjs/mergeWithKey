@@ -5,7 +5,7 @@ import mergeWithKey from "./index"
 
 test(({same, end}) => {
   same(
-    mergeWith((left) => (right) => (key) => key + right + left)({beta: "a"})({beta: "b"}),
+    mergeWithKey((left) => (right) => (key) => key + right + left)({beta: "a"})({beta: "b"}),
     {beta: "betaba"}
   )
 
@@ -14,7 +14,7 @@ test(({same, end}) => {
 
 test(({same, end}) => {
   same(
-    mergeWith((left) => (right) => (key) => key + right + left)({alpha: "a"})({beta: "b"}),
+    mergeWithKey((left) => (right) => (key) => key + right + left)({alpha: "a"})({beta: "b"}),
     {
       alpha: "a",
       beta: "b",
