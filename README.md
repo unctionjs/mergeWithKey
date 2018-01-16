@@ -1,11 +1,10 @@
 # @unction/mergeWithKey
 
-
 ![Tests][BADGE_TRAVIS]
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> (FunctorType => FunctorType => KeyType => any) => FunctorType => FunctorType => FunctorType
+> (FunctorType => FunctorType => KeyType => mixed) => FunctorType => FunctorType => FunctorType
 
 Merges two iterables and uses a provided function to handle conflicts. The function is given the key, the left value, and the right value.
 
@@ -29,6 +28,5 @@ Which returns:
 ```
 
 [BADGE_TRAVIS]: https://img.shields.io/travis/unctionjs/mergeWithKey.svg?maxAge=2592000&style=flat-square
-
 [BADGE_STABILITY]: https://img.shields.io/badge/stability-strong-green.svg?maxAge=2592000&style=flat-square
 [BADGE_DEPENDENCY]: https://img.shields.io/david/unctionjs/mergeWithKey.svg?maxAge=2592000&style=flat-square
