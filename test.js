@@ -1,16 +1,16 @@
 /* eslint-disable flowtype/require-return-type */
-import {test} from "tap"
+import {test} from "tap";
 
-import mergeWithKey from "./index"
+import mergeWithKey from "./index";
 
 test(({same, end}) => {
   same(
     mergeWithKey((left) => (right) => (key) => key + right + left)({beta: "a"})({beta: "b"}),
     {beta: "betaba"}
-  )
+  );
 
-  end()
-})
+  end();
+});
 
 test(({same, end}) => {
   same(
@@ -19,7 +19,7 @@ test(({same, end}) => {
       alpha: "a",
       beta: "b",
     }
-  )
+  );
 
-  end()
-})
+  end();
+});
