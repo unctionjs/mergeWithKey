@@ -4,9 +4,12 @@
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> (FunctorType => FunctorType => KeyType => mixed) => FunctorType => FunctorType => FunctorType
+> MapperFunctionType<L, MapperFunctionType<R, MapperFunctionType<K, V>>> =>
+>   KeyedEnumerableType<R, K> =>
+>     KeyedEnumerableType<L, K> =>
+>       KeyedEnumerableType<V, K>
 
-Merges two iterables and uses a provided function to handle conflicts. The function is given the key, the left value, and the right value.
+Merges two keyed enumerables and uses a function to handle conflicts. The function is given the left value, the right value, and the key.
 
 ``` javascript
 const left = {
@@ -16,7 +19,7 @@ const right = {
   beta: "2"
 }
 
-mergeWith((key, leftValue, rightValue) => key+leftValue+rightValue)(left)(right)
+mergeWithKey((left) => (right) => (key) => key+leftValue+rightValue)(left)(right)
 ```
 
 Which returns:
