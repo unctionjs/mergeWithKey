@@ -1,5 +1,5 @@
 
-import mergeWithKey from "./index.ts";
+import mergeWithKey from "./index";
 
 test(() => {
   expect(
