@@ -1,13 +1,13 @@
 
 import mergeWithKey from "./index";
 
-test(() => {
+test("works", () => {
   expect(
     mergeWithKey((left) => (right) => (key) => key + right + left)({beta: "a"})({beta: "b"})
   ).toEqual({beta: "betaba"});
 });
 
-test(() => {
+test("works", () => {
   expect(
     mergeWithKey((left) => (right) => (key) => key + right + left)({alpha: "a"})({beta: "b"})
   ).toEqual({
