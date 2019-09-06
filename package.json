@@ -54,7 +54,7 @@
   },
   "dependencies": {
     "@unction/attach": "7.6.0",
-    "@unction/reducewithvaluekey": "11.6.0"
+    "@unction/reducewithvaluekey": "11.7.0"
   },
   "files": [
     "index.ts",
