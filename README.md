@@ -7,7 +7,7 @@
 > MapperFunctionType<L, MapperFunctionType<R, MapperFunctionType<K, V>>> =>
 >   KeyedEnumerableType<R, K> =>
 >     KeyedEnumerableType<L, K> =>
->       KeyedEnumerableType<V, K>
+>       ListType<V> | Record<string | number | symbol, V> | Map<K, V> | string
 
 Merges two keyed enumerables and uses a function to handle conflicts. The function is given the left value, the right value, and the key.
 
